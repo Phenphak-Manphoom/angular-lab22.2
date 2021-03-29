@@ -1,0 +1,23 @@
+<app-task #task *ngFor="let t of tasks;let i=index" [task]="t" (OnDeleted)="deleteItem($event)" (OnSelected)="selectedItem($event)">
+
+</app-task>
+<form #form="ngForm" autocomplete="off">
+
+    <h5>Add Task</h5>
+    <div class="row mb-3">
+        <label for="inputEmail3" class="col-sm-2 col-form-label">Name</label>
+        <div class="col-sm-10">
+            <input type="text" name="name" [(ngModel)]="form.name" class="form-control">
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label for="inputPassword3" class="col-sm-2 col-form-label">Description</label>
+        <div class="col-sm-10">
+            <input type="text" name="description" [(ngModel)]="form.description" class="form-control">
+        </div>
+    </div>
+
+
+    <button class="btn btn-primary" type="submit" (click)="addItem(form.value)" style="margin-left:45%;">Add</button>
+
+</form>

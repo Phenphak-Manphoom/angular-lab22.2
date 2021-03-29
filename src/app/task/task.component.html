@@ -1,0 +1,10 @@
+<div class="div1" [class.selected]="isSelected">
+
+    <h5>{{ task.name }} </h5>
+    <p class="p2"> Details: {{ task.description }} </p>
+    <button type="submit" class="btn btn-success" (click)="select()">Select</button>
+    <button type="submit" class="btn btn-danger" (click)="deleted()">Delete</button>
+
+
+
+</div>
